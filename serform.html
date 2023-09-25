@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="waadpet/log.css">
+    <link rel="stylesheet" href="waadpet/styles.css">
+    <title>Services Form</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"><img src="med/logo1.png"></a>
+        <div class="nav-links" id="navLinks">
+            <ion-icon name="close-outline" onclick="hideMenu()"></ion-icon>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html #footer">ABOUT US</a></li>
+                <li><a href="index.html #services">SERVICES</a></li>
+                <li><a href="index.html #testimonials">TESTIMONIALS</a></li>
+                <li><a href="index.html #cta">CONTACT</a></li>
+            </ul>
+        </div>
+        <ion-icon name="grid-outline" onclick="showMenu()"></ion-icon>
+    </nav>
+
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Services</h1>
+            <form action="getser.php" method="POST">
+                <div class="i-g">
+                    <div class="i-f" id="nf">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" name="username" placeholder="Name">
+                    </div>
+                    <div class="i-f">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" placeholder="Email Address">
+                    </div>
+                    <div class="i-f">
+                        <ion-icon name="baseball-outline"></ion-icon>
+                        <input type="service" name="service" placeholder="Service">
+                    </div>
+                </div>
+                <div class="btn1">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

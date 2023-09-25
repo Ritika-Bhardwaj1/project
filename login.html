@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="waadpet/log.css">
+    <link rel="stylesheet" href="waadpet/styles.css">
+    <title>Get Started</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"><img src="med/logo1.png"></a>
+        <div class="nav-links" id="navLinks">
+            <ion-icon name="close-outline" onclick="hideMenu()"></ion-icon>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html #footer">ABOUT US</a></li>
+                <li><a href="index.html #services">SERVICES</a></li>
+                <li><a href="index.html #testimonials">TESTIMONIALS</a></li>
+                <li><a href="index.html #cta">CONTACT</a></li>
+            </ul>
+        </div>
+        <ion-icon name="grid-outline" onclick="showMenu()"></ion-icon>
+    </nav>
+
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form action="getval.php" method="POST">
+                <div class="i-g">
+                    <div class="i-f" id="nf">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" name="username" placeholder="Name" required>
+                    </div>
+                    <div class="i-f">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="i-f">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <p>Forgot password? <a href="#">Click Here</a></p>
+                </div>
+                <div class="btn">
+                   <!-- <button type="button" id="subtn">Sign Up</button>
+                    <button type="button" class="d" id="libtn">Log In</button>-->
+                    <input type="submit" value="Sign Up" id="subtn">
+                    <input type="submit" value="Log In" class="d" id="libtn">
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let subtn=document.getElementById("subtn");
+        let libtn=document.getElementById("libtn");
+        let nf=document.getElementById("nf");
+        let title=document.getElementById("title");
+
+        libtn.onclick=function(){
+            nf.style.maxHeight="0";
+            title.innerHTML="Log In";
+            subtn.classList.add("d");
+            libtn.classList.remove("d");
+        }
+        
+        subtn.onclick=function(){
+            nf.style.maxHeight="60px";
+            title.innerHTML="Sign Up";
+            subtn.classList.remove("d");
+            libtn.classList.add("d");
+        }
+    </script>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
